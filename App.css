@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #18352b;
+  background: #f6f8f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; cursor: pointer; }
+
+.site-header {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
+  background: #fff;
+}
+.brand { color: #18352b; font-size: 1.2rem; font-weight: 750; text-decoration: none; }
+nav { display: flex; gap: .5rem; flex-wrap: wrap; }
+nav button { border: 0; background: transparent; color: inherit; padding: .6rem .8rem; }
+
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-content: center;
+  justify-items: start;
+  gap: .8rem;
+  padding: 3rem clamp(1.5rem, 10vw, 8rem);
+  /* TODO: Add an appropriate, permitted plant background image and overlay. */
+  background: linear-gradient(120deg, #dce8d8, #f6f8f1 72%);
+}
+.hero h1 { max-width: 12ch; margin: 0; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; }
+.hero p { max-width: 42rem; font-size: 1.1rem; }
+.eyebrow { color: #3f7053; font-weight: 700; }
+.primary { border: 0; border-radius: 999px; background: #276647; color: white; padding: .85rem 1.25rem; }
+.content-page { max-width: 72rem; margin: auto; padding: 3rem 1.5rem; }
+
+@media (max-width: 640px) {
+  .site-header { align-items: flex-start; flex-direction: column; }
+}
